@@ -1,0 +1,158 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body{
+	padding-bottom: 60px;
+}
+
+.header{
+	max-width:860px;
+	margin: auto;
+	padding: 10px 16px;
+	display: flex;
+	align-items: center;
+	&__btn{
+		margin-right: 8px;
+		text-decoration: none;
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+}
+.cartPage{
+	max-width:860px;
+	margin: auto;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+.mainPage{
+	max-width:860px;
+	margin: auto;
+	padding-left: 16px;
+	padding-right: 16px;
+	&__top{
+		margin-bottom: 24px;
+	}
+	&__cards{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-left: -6px;
+		margin-right: -6px;
+		.cart{
+			width: calc(33% - 12px);
+			// width: 25%;
+			
+			margin-bottom: 12px;
+			margin-left: 6px;
+			margin-right: 6px;
+		}
+	}
+	&__paginate{
+		display: flex;
+		align-items: center;
+		.btn{
+			margin: 0 6px;
+		}
+	}
+}
+.createPage{
+	max-width: 860px;
+	margin: auto;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+.cart{
+	border-radius: 8px;
+	border: 1px solid #eee;
+	padding: 24px;
+	display: flex;
+	flex-direction: column;
+	&__description{
+		flex: 1;
+	}
+	&__title, &__description, &__price{
+		margin-bottom: 12px;
+	}
+}
+.inputBox{
+	display: block;
+	&--error{
+		.inputBox__title{
+			color: red;
+		}
+		input{
+			border-color: red;
+		}
+	}
+	&__title{
+		margin-bottom: 2px;
+		display: block;
+	}
+	input{
+		width: 100%;
+		display: block;
+	}
+	margin-bottom: 12px;
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+.btn{
+	display: block;
+	width: 100%;
+	margin-bottom: 12px;
+	background: rgb(167, 167, 167);
+	border: none;
+	border-radius: 4px;
+	padding: 4px 12px;
+	color: #fff;
+	cursor: pointer;
+	transition: all .12s ease-in-out;
+	text-decoration: none;
+	text-align: center;
+	&:hover{
+		opacity: .7;
+	}
+	&:active{
+		transform: scale(.8);
+	}
+	
+	&:last-child{
+		margin-bottom: 0px;
+	}
+	&--disabled{
+		opacity: .5;
+		cursor: auto;
+		&:hover{
+			opacity: .5;
+		}
+		&:active{
+			transform: scale(1);
+		}
+	}
+	&--green{
+		background: rgb(0, 196, 39);
+	}
+	&--red{
+		background: rgb(255, 88, 17);
+	}
+}
+
+.counter{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
+	.btn{
+		margin: 0;
+		width: 40%;
+	}
+	&__current{
+		// width: 30%;
+		display: block;
+		flex: none;
+	}
+}
